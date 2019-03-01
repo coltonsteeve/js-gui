@@ -37,28 +37,32 @@
   </main>
 
   <script>
-    console.log('SCRIPT START')
+    console.log('SCRIPT START');
 
-    console.log('Declare testable functions.....................')
+    console.log('Declare testable functions.....................');
 
     function add(x, y) {
-      return x + y
+      return x + y;
     }
-    console.log('Defined add=' + add)
 
-    console.log('Declare event listeners .......................')
+    function max(x,y) {
+      return Math.max(x,y);
+    }
+    console.log('Defined add=' + add);
+    console.log('Defined max=' + max);
+    console.log('Declare event listeners .......................');
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
-      console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
-      console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
-      document.getElementById('result').innerHTML = ans
+      const s = document.getElementById('guest').value;
+      const i = parseInt(document.getElementById('firstNumber').value);
+      console.log('i=' + i);
+      const j = parseInt(document.getElementById('secondNumber').value);
+      console.log('j=' + j);
+      const ans = s + ', the larger number is ' + max(i, j) + '.';
+      document.getElementById('result').innerHTML = ans;
     })
 
-    console.log('SCRIPT END')
+    console.log('SCRIPT END');
   </script>
 
   <!-- JQuery -->
